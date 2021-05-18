@@ -1,0 +1,15 @@
+# Run tests
+
+python setup.py pytest
+
+# Build the library
+
+python setup.py bdist_wheel
+
+# Install the library from a wheel
+
+pip install wheelfile.whl
+
+# Once it is installed, it can be imported in the project as always
+
+from python_lib_name import myfunctions
