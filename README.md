@@ -13,6 +13,7 @@ Template for creating python libraries easily.
 * setup.py: File that will help us build the library.
 
 <br/>
+<br/>
 
 ## What are the steps I need to follow in order to create a new library?
 
@@ -30,3 +31,48 @@ pip install -r requirements.txt
 ```
 
 3) You are ready to start coding! Remember to update the setup.py with the new dependencies you add.
+
+
+<br/>
+<br/>
+
+## How do I run tests?
+
+This is the command you are looking for:
+
+```
+python setup.py pytest
+```
+
+Run it after creating a new function in the test_my_functions.py file, importing the library you created.
+
+<br/>
+<br/>
+
+## How do I build the library?
+
+Run the following command:
+
+```
+python setup.py bdist_wheel
+```
+
+<br/>
+<br/>
+
+## After building the library, how can I try everything is working fine?
+
+First install your own library using the following command.
+
+```
+pip install wheelfile.whl
+```
+
+You will be using the wheel you generated building the library to install your own library.
+
+Once you have done this, you can import your library as any other in the world:
+
+```
+from python_lib_name import my_functions
+```
+
