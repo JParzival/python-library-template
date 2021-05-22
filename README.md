@@ -21,7 +21,7 @@ Template for creating python libraries easily.
 
 ```
 python -m venv <name of your venv>
-source venv/bin/activate
+source <name of your venv>/bin/activate
 ```
 
 2) Install the requirements.txt file.
@@ -65,7 +65,7 @@ python setup.py bdist_wheel
 First install your own library using the following command.
 
 ```
-pip install wheelfile.whl
+pip install dist/<name of the wheelfile>.whl
 ```
 
 You will be using the wheel you generated building the library to install your own library.
@@ -76,3 +76,13 @@ Once you have done this, you can import your library as any other in the world:
 from python_lib_name import my_functions
 ```
 
+<br/>
+<br/>
+
+## How do I upload my package?
+
+After creating an account on [PyPi](https://pypi.org/), run the following command:
+
+```
+twine upload dist/*
+```
